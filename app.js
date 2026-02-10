@@ -18,6 +18,11 @@ const config = {
 
 const copy = {
   id: {
+    meta: {
+      title: "JPncoded - Drop baru, layout rapi, stream ngebut",
+      description:
+        "JPncoded gerbang ke drop JAV terbaru: layout bersih, player cepat, dan link download siap gas.",
+    },
     nav: {
       home: "Home",
       inside: "Isi",
@@ -79,6 +84,11 @@ const copy = {
     },
   },
   en: {
+    meta: {
+      title: "JPncoded - Fresh drops, clean layout, fast stream",
+      description:
+        "JPncoded is your gateway to fresh JAV drops with a clean layout, fast player, and download-ready links.",
+    },
     nav: {
       home: "Home",
       inside: "Inside",
@@ -191,6 +201,25 @@ function applyLang(lang) {
       el.innerHTML = value;
     }
   });
+
+  if (dict.meta) {
+    const { title, description } = dict.meta;
+    if (typeof title === "string") {
+      document.title = title;
+      const ogTitle = document.querySelector('meta[property="og:title"]');
+      const twTitle = document.querySelector('meta[name="twitter:title"]');
+      if (ogTitle) ogTitle.setAttribute("content", title);
+      if (twTitle) twTitle.setAttribute("content", title);
+    }
+    if (typeof description === "string") {
+      const metaDesc = document.querySelector('meta[name="description"]');
+      const ogDesc = document.querySelector('meta[property="og:description"]');
+      const twDesc = document.querySelector('meta[name="twitter:description"]');
+      if (metaDesc) metaDesc.setAttribute("content", description);
+      if (ogDesc) ogDesc.setAttribute("content", description);
+      if (twDesc) twDesc.setAttribute("content", description);
+    }
+  }
 
   document.querySelectorAll(".lang-btn").forEach((btn) => {
     const active = btn.dataset.lang === lang;
