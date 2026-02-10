@@ -397,6 +397,15 @@ a {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: nowrap;
+  }
+
+  .brand {
+    font-size: 1.4rem;
+  }
+
+  .lang-switch {
+    margin-left: auto;
   }
 
   .page {
