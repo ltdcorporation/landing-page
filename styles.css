@@ -349,6 +349,10 @@ a {
   color: var(--accent-2);
 }
 
+.is-hidden {
+  display: none !important;
+}
+
 .site-footer {
   display: flex;
   align-items: center;

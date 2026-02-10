@@ -236,10 +236,12 @@ function wireLinks() {
     if (href && href !== "#") {
       el.setAttribute("href", href);
       el.removeAttribute("aria-disabled");
+      el.classList.remove("is-hidden");
       return;
     }
     el.setAttribute("href", "#");
     el.setAttribute("aria-disabled", "true");
+    el.classList.add("is-hidden");
   });
 }
 
