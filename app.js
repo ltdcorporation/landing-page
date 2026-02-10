@@ -1,7 +1,7 @@
 const config = {
   links: {
     main: "https://jpncoded.pro",
-    new: "https://jpncoded.pro/new",
+    new: "https://jpncoded.pro/#fresh",
     categories: "https://jpncoded.pro/categories",
     tags: "https://jpncoded.pro/tags",
     actresses: "https://jpncoded.pro/actresses",
@@ -9,10 +9,12 @@ const config = {
     dmca: "#",
     privacy: "#",
     terms: "#",
-    telegram: "#",
-    x: "#",
+    telegram: "https://t.me/jpncodedpro",
+    x: "https://x.com/jpncoded",
+    instagram: "https://instagram.com/jpncoded",
+    youtube: "https://youtube.com/@jpncoded",
     discord: "#",
-    email: "mailto:hello@jpncoded.pro",
+    email: "#",
   },
 };
 
